@@ -10,24 +10,29 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
+    "cors": "^2.8.5",
     "eslint": "^6.8.0",
     "eslint-config-airbnb": "^18.1.0",
     "eslint-plugin-import": "^2.20.1",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.19.0",
+    "express": "^4.17.1",
+    "express-graphql": "^0.9.0",
+    "graphql": "^14.6.0",
+    "mongoose": "^5.9.5",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
     "react-scripts": "3.4.0"
   },
   "homepage": "./",
-  "main": "src/start.js",
+  "main": "electron/index.js",
   "scripts": {
     "start": "nf start -p 3000",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "electron": "electron .",
-    "electron-start": "node src/start-react",
+    "electron-start": "node server/index.js",
     "react-start": "BROWSER=none react-scripts start",
     "pack-linux": "yarn run build && electron-builder --linux",
     "pack-mac": "yarn run build && electron-builder --mac",
@@ -35,7 +40,7 @@
     "postinstall": "electron-builder install-app-deps"
   },
   "build": {
-    "appId": "com.electron.electron-with-create-react-app",
+    "appId": "com.electron.jeff-electron-react-boiler-plate",
     "directories": {
       "buildResources": "public"
     },
